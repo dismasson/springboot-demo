@@ -4,4 +4,8 @@ management:
       base-path: /my-actuator
       exposure:
         include: "*"
-        exclude: "env"
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
