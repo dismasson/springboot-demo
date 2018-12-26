@@ -4,4 +4,13 @@ management:
       base-path: /my-actuator
       exposure:
         include: "*"
-        exclude: "env"
+  endpoint:
+    shutdown:
+      ## 启用快速停服
+      enabled: true
+eureka:
+  instance:
+    appname: shutdown-test
+  client:
+    service-url:
+      defaultZone: http://sxli:sxli@localhost:8761/eureka/
